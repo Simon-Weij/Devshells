@@ -3,7 +3,13 @@
   outputs = {flakelight, ...}:
     flakelight ./. {
       devShell = {
-        packages = pkgs: [pkgs.cargo pkgs.rust-analyzer pkgs.rustc];
+        packages = pkgs: [
+          pkgs.cargo
+          pkgs.rust-analyzer
+          pkgs.rustc
+          pkgs.clippy
+          pkgs.rustfmt
+        ];
 
         shellHook = pkgs: ''
           export RUST_SRC_PATH="${pkgs.rustPlatform.rustLibSrc}";
