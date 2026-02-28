@@ -3,7 +3,7 @@
   outputs = {flakelight, ...}:
     flakelight ./. {
       devShell = {
-        packages = pkgs: [pkgs.wails pkgs.go pkgs.npm];
+        packages = pkgs: [pkgs.wails pkgs.go pkgs.nodejs];
       };
     };
 }
