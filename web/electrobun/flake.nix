@@ -31,6 +31,7 @@
               pkgs.stdenv.cc.cc.lib
             ]
           }:$LD_LIBRARY_PATH
+          export GIO_MODULE_DIR="${pkgs.glib-networking}/lib/gio/modules/"
         '';
       };
     };
